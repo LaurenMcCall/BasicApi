@@ -12,10 +12,10 @@ namespace BasicApi.Controllers
     public class HelloWorldController : ControllerBase
     {
         [HttpGet]
-        public string HelloWorld()
+        public string HelloWorld(string who)
         {
             var currentDateAndTime = DateTime.Now;
-            return $"Hello, World. {currentDateAndTime}";
+            return $"Hello, {who}. {currentDateAndTime}";
         }
     }
 }
