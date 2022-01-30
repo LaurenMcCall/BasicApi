@@ -14,7 +14,8 @@ namespace BasicApi.Controllers
         [HttpGet]
         public string HelloWorld()
         {
-            return "Hello, World.";
+            var currentDateAndTime = DateTime.Now;
+            return $"Hello, World. {currentDateAndTime}";
         }
     }
 }
