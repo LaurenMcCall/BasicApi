@@ -14,8 +14,17 @@ namespace BasicApi.Controllers
         [HttpGet]
         public string HelloWorld(string who)
         {
+            string whoOrWorld;
+            if (who == null)
+            {
+                whoOrWorld = "World";
+            }
+            else
+            {
+                whoOrWorld = who;
+            }
             var currentDateAndTime = DateTime.Now;
-            return $"Hello, {who}. {currentDateAndTime}";
+            return $"Hello, {whoOrWorld}. {currentDateAndTime}";
         }
     }
 }
