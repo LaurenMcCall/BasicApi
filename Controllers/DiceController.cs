@@ -14,7 +14,11 @@ namespace BasicApi.Controllers
         [HttpGet("{sides}")]
         public int Roll(int sides)
         {
-            return sides;
+            var randomNumberGenerator = new Random();
+
+            var roll = randomNumberGenerator.Next(sides) + 1;
+
+            return roll;
         }
     }
 }
