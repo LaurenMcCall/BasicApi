@@ -12,7 +12,7 @@ namespace BasicApi.Controllers
     public class HelloWorldController : ControllerBase
     {
         [HttpGet]
-        public string HelloWorld(string who)
+        public string HelloWorld(string who = "World")
         {
             // string whoOrWorld;
 
@@ -24,8 +24,8 @@ namespace BasicApi.Controllers
             // {
             //     whoOrWorld = who;
             // }
-            string whoOrWorld = (who == null) ? "World" : who;
-            return $"Hello, {whoOrWorld}. {DateTime.Now}";
+            // string whoOrWorld = (who == null) ? "World" : who;
+            return $"Hello, {who}. {DateTime.Now}";
         }
     }
 }
